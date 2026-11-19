@@ -16,41 +16,41 @@ const STORES = [
 const p = (a, b, c, d, e) => ({ blinkit: a, zepto: b, instamart: c, bigbasket: d, jiomart: e });
 
 const PRODUCTS = [
-  { id: "milk",   name: "Toned milk",              size: "1 L",     cat: "Dairy",     emoji: "🥛", tags: "milk amul dairy",       prices: p(56, 55, 57, 56, 54) },
-  { id: "curd",   name: "Fresh curd",              size: "400 g",   cat: "Dairy",     emoji: "🍶", tags: "dahi yogurt curd",      prices: p(35, 34, 36, 33, null) },
-  { id: "butter", name: "Salted butter",           size: "100 g",   cat: "Dairy",     emoji: "🧈", tags: "butter amul dairy",     prices: p(62, 60, 62, 58, 57) },
-  { id: "eggs",   name: "Farm eggs",               size: "12 pcs",  cat: "Dairy",     emoji: "🥚", tags: "eggs anda",             prices: p(96, 92, 99, 94, 89) },
-  { id: "atta",   name: "Whole wheat atta",        size: "5 kg",    cat: "Staples",   emoji: "🌾", tags: "atta flour wheat",      prices: p(268, 249, 259, 245, 239) },
-  { id: "rice",   name: "Basmati rice",            size: "1 kg",    cat: "Staples",   emoji: "🍚", tags: "rice chawal basmati",   prices: p(135, 129, 138, 124, 119) },
-  { id: "dal",    name: "Toor dal",                size: "1 kg",    cat: "Staples",   emoji: "🫘", tags: "dal toor arhar pulses", prices: p(178, 172, 181, 165, 168) },
-  { id: "oil",    name: "Sunflower oil",           size: "1 L",     cat: "Staples",   emoji: "🛢️", tags: "oil cooking sunflower", prices: p(152, 148, 155, 141, 139) },
-  { id: "sugar",  name: "Sugar",                   size: "1 kg",    cat: "Staples",   emoji: "🧂", tags: "sugar cheeni",          prices: p(52, 51, 54, 49, 48) },
-  { id: "tomato", name: "Tomato",                  size: "500 g",   cat: "Fresh",     emoji: "🍅", tags: "tomato vegetable",      prices: p(24, 22, 26, 20, null) },
-  { id: "onion",  name: "Onion",                   size: "1 kg",    cat: "Fresh",     emoji: "🧅", tags: "onion pyaz vegetable",  prices: p(44, 42, 46, 38, 36) },
-  { id: "banana", name: "Robusta banana",          size: "6 pcs",   cat: "Fresh",     emoji: "🍌", tags: "banana fruit kela",     prices: p(38, 35, 40, 36, null) },
-  { id: "tea",    name: "Tea leaves",              size: "500 g",   cat: "Beverages", emoji: "🍵", tags: "tea chai",              prices: p(265, 259, 268, 249, 245) },
-  { id: "coffee", name: "Instant coffee",          size: "100 g",   cat: "Beverages", emoji: "☕", tags: "coffee nescafe",        prices: p(345, 339, 349, 329, 325) },
-  { id: "chips",  name: "Salted potato chips",     size: "90 g",    cat: "Snacks",    emoji: "🥔", tags: "chips snacks lays",     prices: p(30, 30, 30, 28, 27) },
-  { id: "biscuit",name: "Cream biscuits",          size: "250 g",   cat: "Snacks",    emoji: "🍪", tags: "biscuit snacks cookies",prices: p(48, 45, 50, 44, 42) },
-  { id: "apple", name: "Red apples",              size: "4 pcs",   cat: "Fruits & vegetables", emoji: "🍎", tags: "apple fruit fresh", prices: p(99, 95, 105, 89, 92), image: "photo-1560807707-8cc77767d783" },
-  { id: "potato",name: "Potato",                  size: "1 kg",    cat: "Fruits & vegetables", emoji: "🥔", tags: "potato aloo vegetable", prices: p(35, 32, 38, 30, 34), image: "photo-1518977676601-b53f82aba655" },
-  { id: "spinach",name: "Fresh spinach",          size: " bunch",  cat: "Fruits & vegetables", emoji: "🥬", tags: "spinach palak greens", prices: p(25, 28, 26, 22, 24), image: "photo-1576045057995-568f588f82fb" },
+  { id: "milk",   name: "Toned milk",              size: "1 L",     cat: "Dairy",     emoji: "🥛", tags: "milk amul dairy",       prices: p(56, 55, 57, 56, 54), imageUrl: "https://www.bbassets.com/media/uploads/p/l/40158264_1-nandini-pasteurised-toned-milk.jpg" },
+  { id: "curd",   name: "Fresh curd",              size: "400 g",   cat: "Dairy",     emoji: "🍶", tags: "dahi yogurt curd",      prices: p(35, 34, 36, 33, null), imageUrl: "https://www.bbassets.com/media/uploads/p/xl/40200520-7_1-id-creamy-thick-curd.jpg" },
+  { id: "butter", name: "Salted butter",           size: "100 g",   cat: "Dairy",     emoji: "🧈", tags: "butter amul dairy",     prices: p(62, 60, 62, 58, 57), imageUrl: "https://www.bbassets.com/media/uploads/p/s/104860_10-amul-butter-pasteurised.jpg" },
+  { id: "eggs",   name: "Farm eggs",               size: "12 pcs",  cat: "Dairy",     emoji: "🥚", tags: "eggs anda",             prices: p(96, 92, 99, 94, 89), imageUrl: "https://www.bbassets.com/media/uploads/p/l/40348875_3-fresho-premium-white-eggs.jpg" },
+  { id: "atta",   name: "Whole wheat atta",        size: "5 kg",    cat: "Staples",   emoji: "🌾", tags: "atta flour wheat",      prices: p(268, 249, 259, 245, 239), imageUrl: "https://www.bbassets.com/media/uploads/p/l/126903-3_3-aashirvaad-atta-whole-wheat.jpg" },
+  { id: "rice",   name: "Basmati rice",            size: "1 kg",    cat: "Staples",   emoji: "🍚", tags: "rice chawal basmati",   prices: p(135, 129, 138, 124, 119), imageUrl: "https://www.bbassets.com/media/uploads/p/xl/414865_1-india-gate-regular-choice-basmati-rice.jpg" },
+  { id: "dal",    name: "Toor dal",                size: "1 kg",    cat: "Staples",   emoji: "🫘", tags: "dal toor arhar pulses", prices: p(178, 172, 181, 165, 168), imageUrl: "https://www.bbassets.com/media/uploads/p/l/10000425_15-bb-royal-toor-dalarhar-dal-desi.jpg" },
+  { id: "oil",    name: "Sunflower oil",           size: "1 L",     cat: "Staples",   emoji: "🛢️", tags: "oil cooking sunflower", prices: p(152, 148, 155, 141, 139), imageUrl: "https://www.bbassets.com/media/uploads/p/s/40054142_3-sunpure-refined-sunflower-oil.jpg" },
+  { id: "sugar",  name: "Sugar",                   size: "1 kg",    cat: "Staples",   emoji: "🧂", tags: "sugar cheeni",          prices: p(52, 51, 54, 49, 48), imageUrl: "https://www.bbassets.com/media/uploads/p/xl/40019396_11-bb-popular-sugar.jpg" },
+  { id: "tomato", name: "Tomato",                  size: "500 g",   cat: "Fresh",     emoji: "🍅", tags: "tomato vegetable",      prices: p(24, 22, 26, 20, null), imageUrl: "https://www.bbassets.com/media/uploads/p/xl/40115946_2-fresho-tomato-local-large-institutional.jpg" },
+  { id: "onion",  name: "Onion",                   size: "1 kg",    cat: "Fresh",     emoji: "🧅", tags: "onion pyaz vegetable",  prices: p(44, 42, 46, 38, 36), imageUrl: "https://www.bbassets.com/media/uploads/p/xl/40075537_7-fresho-onion.jpg" },
+  { id: "banana", name: "Robusta banana",          size: "6 pcs",   cat: "Fresh",     emoji: "🍌", tags: "banana fruit kela",     prices: p(38, 35, 40, 36, null), imageUrl: "https://www.bigbasket.com/media/uploads/p/xl/40129358_1-fresho-banana-robusta.jpg" },
+  { id: "tea",    name: "Tea leaves",              size: "500 g",   cat: "Beverages", emoji: "🍵", tags: "tea chai",              prices: p(265, 259, 268, 249, 245), imageUrl: "https://www.bbassets.com/media/uploads/p/s/240046_1-tata-tea-premium-tea.jpg" },
+  { id: "coffee", name: "Instant coffee",          size: "100 g",   cat: "Beverages", emoji: "☕", tags: "coffee nescafe",        prices: p(345, 339, 349, 329, 325), imageUrl: "https://www.bbassets.com/media/uploads/p/s/231187_15-nescafe-classic-100-pure-instant-coffee.jpg" },
+  { id: "chips",  name: "Salted potato chips",     size: "90 g",    cat: "Snacks",    emoji: "🥔", tags: "chips snacks lays",     prices: p(30, 30, 30, 28, 27), imageUrl: "https://www.bbassets.com/media/uploads/p/l/40219149_3-bingo-original-style-potato-chips-salt-sprinkled.jpg" },
+  { id: "biscuit",name: "Cream biscuits",          size: "250 g",   cat: "Snacks",    emoji: "🍪", tags: "biscuit snacks cookies",prices: p(48, 45, 50, 44, 42), imageUrl: "https://www.bbassets.com/media/uploads/p/s/40025067_10-britannia-milk-bikis-milk-cream-biscuits.jpg" },
+  { id: "apple", name: "Red apples",              size: "4 pcs",   cat: "Fruits & vegetables", emoji: "🍎", tags: "apple fruit fresh", prices: p(99, 95, 105, 89, 92), imageUrl: "https://www.bbassets.com/media/uploads/p/xl/40317692_1-fresho-indian-apple-red-delicious-regular.jpg" },
+  { id: "potato",name: "Potato",                  size: "1 kg",    cat: "Fruits & vegetables", emoji: "🥔", tags: "potato aloo vegetable", prices: p(35, 32, 38, 30, 34), imageUrl: "https://www.bbassets.com/media/uploads/p/l/40075387_3-fresho-potato-economy.jpg" },
+  { id: "spinach",name: "Fresh spinach",          size: " bunch",  cat: "Fruits & vegetables", emoji: "🥬", tags: "spinach palak greens", prices: p(25, 28, 26, 22, 24), imageUrl: "https://www.bbassets.com/media/uploads/p/l/10000389_12-fresho-palak-cleaned-without-roots.jpg" },
   { id: "orange",name: "Orange",                  size: "6 pcs",   cat: "Fruits & vegetables", emoji: "🍊", tags: "orange fruit citrus", prices: p(75, 79, 82, 70, 73), image: "photo-1547514701-42782101795e" },
-  { id: "cheese",name: "Cheese slices",           size: "200 g",   cat: "Dairy",     emoji: "🧀", tags: "cheese dairy slices", prices: p(135, 129, 139, 125, 128), image: "photo-1486297678162-eb2a19b0a32d" },
+  { id: "cheese",name: "Cheese slices",           size: "200 g",   cat: "Dairy",     emoji: "🧀", tags: "cheese dairy slices", prices: p(135, 129, 139, 125, 128), imageUrl: "https://www.bbassets.com/media/uploads/p/xl/40003159_10-milky-mist-cheese-slices.jpg" },
   { id: "yogurt",name: "Plain yogurt",            size: "400 g",   cat: "Dairy",     emoji: "🥣", tags: "yogurt dahi dairy", prices: p(48, 45, 49, 44, 46), image: "photo-1488477181946-6428a0291777" },
   { id: "bread", name: "Whole wheat bread",       size: "400 g",   cat: "Bakery",    emoji: "🍞", tags: "bread bakery loaf", prices: p(45, 42, 48, 40, 43), image: "photo-1509440159596-0249088772ff" },
   { id: "croissant",name: "Butter croissant",     size: "2 pcs",   cat: "Bakery",    emoji: "🥐", tags: "croissant bakery pastry", prices: p(60, 58, 65, 55, 59), image: "photo-1555507036-ab1f4038808a" },
   { id: "chicken",name: "Chicken breast",         size: "500 g",   cat: "Meat & seafood", emoji: "🍗", tags: "chicken meat protein", prices: p(185, 179, 199, 175, 188), image: "photo-1607623814075-e51df1bdc82f" },
   { id: "fish",  name: "Fresh fish fillet",       size: "400 g",   cat: "Meat & seafood", emoji: "🐟", tags: "fish seafood fillet", prices: p(240, 229, 249, 235, 239), image: "photo-1510130387422-82bed34b37e9" },
-  { id: "peas",  name: "Frozen green peas",       size: "500 g",   cat: "Frozen foods", emoji: "🫛", tags: "frozen peas vegetables", prices: p(75, 72, 79, 69, 73), image: "photo-1587049352851-8d4e89133924" },
-  { id: "icecream",name: "Vanilla ice cream",      size: "500 ml",  cat: "Frozen foods", emoji: "🍨", tags: "ice cream frozen dessert", prices: p(120, 115, 125, 110, 118), image: "photo-1501446529957-6226bd447c46" },
+  { id: "peas",  name: "Frozen green peas",       size: "500 g",   cat: "Frozen foods", emoji: "🫛", tags: "frozen peas vegetables", prices: p(75, 72, 79, 69, 73), imageUrl: "assets/fresho-frozen-green-peas.webp" },
+  { id: "icecream",name: "Vanilla ice cream",      size: "500 ml",  cat: "Frozen foods", emoji: "🍨", tags: "ice cream frozen dessert", prices: p(120, 115, 125, 110, 118), imageUrl: "assets/kwality-walls-vanilla-ice-cream.webp" },
   { id: "juice", name: "Orange juice",            size: "1 L",     cat: "Beverages", emoji: "🧃", tags: "juice orange drink", prices: p(110, 105, 115, 99, 108), image: "photo-1600271886742-f049cd451bba" },
   { id: "water", name: "Packaged drinking water", size: "1 L",     cat: "Beverages", emoji: "💧", tags: "water bottle drink", prices: p(20, 20, 20, 18, 20), image: "photo-1560023907-5f339617ea30" },
-  { id: "chocolate",name: "Milk chocolate",       size: "100 g",   cat: "Snacks",    emoji: "🍫", tags: "chocolate sweets candy", prices: p(50, 48, 55, 45, 49), image: "photo-1548907040-4d42bfc2a5a0" },
-  { id: "detergent",name: "Laundry detergent",    size: "1 kg",    cat: "Home care", emoji: "🧺", tags: "detergent washing laundry", prices: p(145, 139, 149, 135, 140), image: "photo-1605276374104-dee2a0ed3cd6" },
-  { id: "dishwash",name: "Dishwashing liquid",    size: "500 ml",  cat: "Home care", emoji: "🧽", tags: "dishwash soap kitchen cleaning", prices: p(99, 95, 105, 92, 97), image: "photo-1585421514738-01798e348b17" },
-  { id: "shampoo",name: "Daily care shampoo",     size: "180 ml",  cat: "Personal care", emoji: "🧴", tags: "shampoo hair personal care", prices: p(125, 119, 129, 115, 122), image: "photo-1608248543803-ba4f8c70ae0b" },
-  { id: "toothpaste",name: "Mint toothpaste",     size: "150 g",   cat: "Personal care", emoji: "🪥", tags: "toothpaste oral dental", prices: p(85, 82, 89, 79, 83), image: "photo-1609845478782-1b9f9d2f06f4" },
+  { id: "chocolate",name: "Milk chocolate",       size: "100 g",   cat: "Snacks",    emoji: "🍫", tags: "chocolate sweets candy", prices: p(50, 48, 55, 45, 49), imageUrl: "assets/cadbury-dairy-milk-chocolate.webp" },
+  { id: "detergent",name: "Laundry detergent",    size: "1 kg",    cat: "Home care", emoji: "🧺", tags: "detergent washing laundry", prices: p(145, 139, 149, 135, 140), imageUrl: "assets/beco-laundry-liquid.webp" },
+  { id: "dishwash",name: "Dishwashing liquid",    size: "500 ml",  cat: "Home care", emoji: "🧽", tags: "dishwash soap kitchen cleaning", prices: p(99, 95, 105, 92, 97), imageUrl: "assets/vim-dishwash-liquid.webp" },
+  { id: "shampoo",name: "Daily care shampoo",     size: "180 ml",  cat: "Personal care", emoji: "🧴", tags: "shampoo hair personal care", prices: p(125, 119, 129, 115, 122), imageUrl: "https://www.bbassets.com/media/uploads/p/s/100014720_10-himalaya-gentle-daily-care-protein-shampoo.jpg" },
+  { id: "toothpaste",name: "Mint toothpaste",     size: "150 g",   cat: "Personal care", emoji: "🪥", tags: "toothpaste oral dental", prices: p(85, 82, 89, 79, 83), imageUrl: "https://www.bbassets.com/media/uploads/p/s/40179844_6-colgate-charcoal-clean-black-gel-toothpaste-bamboo-charcoal-mint.jpg" },
   { id: "diapers",name: "Baby diapers",           size: "Pack of 10", cat: "Baby care", emoji: "🍼", tags: "baby diapers infant", prices: p(199, 189, 205, 195, 190), image: "photo-1516627145497-ae6968895b74" },
 ];
 
@@ -167,7 +167,7 @@ function cardHTML(x) {
   return `
     <article class="card" data-id="${x.id}">
       <div class="card-top">
-        <img class="product-image" src="https://images.unsplash.com/${x.image || CATEGORY_IMAGES[x.cat] || CATEGORY_IMAGES.Fresh}?auto=format&fit=crop&w=600&q=80" alt="${x.name}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=600&q=80'" />
+        <img class="product-image" src="${x.imageUrl || `https://images.unsplash.com/${x.image || CATEGORY_IMAGES[x.cat] || CATEGORY_IMAGES.Fresh}?auto=format&fit=crop&w=600&q=80`}" alt="${x.name}" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/${CATEGORY_IMAGES[x.cat] || CATEGORY_IMAGES.Fresh}?auto=format&fit=crop&w=600&q=80'" />
         <div><h3>${x.name}</h3><p class="size">${x.size}</p></div>
       </div>
       <ul class="prices">${rows}</ul>
@@ -240,3 +240,6 @@ renderHero();
 renderChips();
 renderGrid();
 renderStores();
+
+
+
