@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grab Grocery – Compare grocery prices across apps</title>
+  <meta name="description" content="Browse grocery categories, compare sample prices, and search products across popular delivery apps." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Grab Grocery home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32" width="32" height="32"><path d="M5 9h22l-2.4 13a3 3 0 0 1-3 2.4H10.4a3 3 0 0 1-3-2.4L5 9Z" fill="#1B2A41"/><path d="M11 9a5 5 0 0 1 10 0" fill="none" stroke="#1B2A41" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="16.5" r="3" fill="#FFD23F"/></svg>
+      </span>
+      <span class="brand-name">Grab Grocery</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#products">Compare</a>
+      <a href="#how">How it works</a>
+      <a href="#stores">Stores</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1>Same groceries.<br />Different prices.</h1>
+        <p class="hero-sub">Search everyday groceries, compare sample prices, and jump straight to the store you prefer.</p>
+
+        <form class="hero-search" id="heroSearch" role="search">
+          <label class="visually-hidden" for="searchInput">Search groceries</label>
+          <input id="searchInput" type="search" placeholder="Try “milk”, “atta” or “eggs”" autocomplete="off" />
+          <button type="submit">Compare prices</button>
+        </form>
+
+        <ul class="quick-picks" aria-label="Popular searches">
+          <li><button type="button" data-search="milk">Milk</button></li>
+          <li><button type="button" data-search="atta">Atta</button></li>
+          <li><button type="button" data-search="eggs">Eggs</button></li>
+          <li><button type="button" data-search="oil">Oil</button></li>
+          <li><button type="button" data-search="tea">Tea</button></li>
+        </ul>
+      </div>
+
+      <aside class="hero-tag" aria-label="Example price comparison">
+        <div class="tag-hole" aria-hidden="true"></div>
+        <p class="tag-item">Toned milk, 1 L</p>
+        <ul class="tag-bars" id="heroBars"></ul>
+        <p class="tag-note" id="heroNote"></p>
+      </aside>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="shop" id="products">
+      <div class="shop-head">
+        <h2>Compare prices</h2>
+        <div class="controls">
+          <div class="chips" id="chips" role="tablist" aria-label="Categories"></div>
+          <label class="sort">
+            <span>Sort by</span>
+            <select id="sortSelect">
+              <option value="relevance">Popular</option>
+              <option value="saving">Biggest saving</option>
+              <option value="low">Lowest price</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+      </div>
+
+      <p class="result-line" id="resultLine" aria-live="polite"></p>
+      <div class="grid" id="grid"></div>
+      <div class="empty" id="empty" hidden>
+        <p><strong>No items match that search.</strong></p>
+        <p>Check the spelling, or clear the search to see everything.</p>
+        <button type="button" id="clearSearch">Clear search</button>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="how" id="how">
+      <h2>How it works</h2>
+      <ol class="steps">
+        <li><h3>Find your items</h3><p>Search or browse by category. Each item shows every app's price side by side.</p></li>
+        <li><h3>Browse categories</h3><p>Explore fresh produce, pantry staples, snacks, home care and more.</p></li>
+        <li><h3>Choose a store</h3><p>Open a retailer search with your selected product ready to find.</p></li>
+      </ol>
+    </section>
+
+    <!-- STORES -->
+    <section class="stores" id="stores">
+      <h2>Stores we compare</h2>
+      <ul class="store-list" id="storeList"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p><strong>Grab Grocery</strong> is a student front-end project. Prices, fees and availability on this page are sample data, not live prices.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
