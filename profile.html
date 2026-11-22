@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffd23f">
+  <title>My Profile · Grab Grocery</title>
+  <meta name="description" content="View and update your Grab Grocery demo profile.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body class="profile-page">
+  <header class="site-header">
+    <a class="brand" href="shop.html" aria-label="Grab Grocery home">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 32 32" width="32" height="32"><path d="M5 9h22l-2.4 13a3 3 0 0 1-3 2.4H10.4a3 3 0 0 1-3-2.4L5 9Z" fill="#1B2A41"/><path d="M11 9a5 5 0 0 1 10 0" fill="none" stroke="#1B2A41" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="16.5" r="3" fill="#FFD23F"/></svg></span>
+      <span class="brand-name">Grab Grocery</span>
+    </a>
+    <nav class="nav" aria-label="Main"><a href="shop.html#products">Compare</a><a href="shop.html#how">How it works</a><a href="shop.html#stores">Stores</a><a href="shop.html#about">About</a></nav>
+    <a class="profile-link" href="profile.html" aria-current="page"><span class="profile-link-icon" aria-hidden="true">&#9679;</span>Profile</a>
+  </header>
+
+  <main class="profile-main">
+    <div class="profile-heading">
+      <div><p class="profile-kicker">YOUR ACCOUNT</p><h1>My profile</h1><p>Keep your contact and delivery details in one place.</p></div>
+      <a class="back-to-shop" href="shop.html">&#8592; Back to shopping</a>
+    </div>
+    <div class="profile-layout">
+      <aside class="profile-summary" aria-label="Profile summary">
+        <div class="profile-avatar" id="profileAvatar" aria-hidden="true">GG</div>
+        <h2 id="summaryName">Your name</h2>
+        <p id="summaryEmail">Add your email address</p>
+        <span class="demo-badge"><span></span> Demo profile</span>
+        <div class="summary-divider"></div>
+        <p class="summary-caption">Your saved details are stored only in this browser for this demo.</p>
+        <a href="shop.html#products" class="summary-link">Continue comparing <span aria-hidden="true">&#8594;</span></a>
+      </aside>
+
+      <form class="profile-form" id="profileForm">
+        <section class="profile-section" aria-labelledby="personalTitle">
+          <div class="section-heading"><div><h2 id="personalTitle">Personal information</h2><p>Basic details for your profile.</p></div><span class="section-number">01</span></div>
+          <div class="profile-fields">
+            <label class="profile-field"><span>Full name</span><input type="text" name="fullName" id="fullName" autocomplete="name" placeholder="Your name"></label>
+            <label class="profile-field"><span>Email address</span><input type="email" name="email" id="profileEmail" autocomplete="email" placeholder="you@example.com" required></label>
+            <label class="profile-field"><span>Phone number</span><input type="tel" name="phone" id="phone" autocomplete="tel" inputmode="tel" placeholder="Add a phone number"></label>
+          </div>
+        </section>
+
+        <section class="profile-section" aria-labelledby="addressTitle">
+          <div class="section-heading"><div><h2 id="addressTitle">Delivery address</h2><p>Optional details to keep your shopping notes together.</p></div><span class="section-number">02</span></div>
+          <div class="profile-fields">
+            <label class="profile-field profile-field-wide"><span>Address</span><input type="text" name="address" autocomplete="street-address" placeholder="House, street, area"></label>
+            <label class="profile-field"><span>City</span><input type="text" name="city" autocomplete="address-level2" placeholder="City"></label>
+            <label class="profile-field"><span>State</span><input type="text" name="state" autocomplete="address-level1" placeholder="State"></label>
+            <label class="profile-field"><span>PIN code</span><input type="text" name="pincode" autocomplete="postal-code" inputmode="numeric" pattern="[0-9]{6}" maxlength="6" placeholder="6-digit PIN code" aria-describedby="pinHint"><small id="pinHint">Enter a 6-digit PIN code.</small></label>
+          </div>
+        </section>
+
+        <section class="profile-section" aria-labelledby="preferencesTitle">
+          <div class="section-heading"><div><h2 id="preferencesTitle">Shopping preferences</h2><p>Choose the stores you usually compare.</p></div><span class="section-number">03</span></div>
+          <fieldset class="platform-preferences"><legend>Favorite platforms</legend>
+            <label><input type="checkbox" name="platforms" value="Blinkit"><span>Blinkit</span></label>
+            <label><input type="checkbox" name="platforms" value="Zepto"><span>Zepto</span></label>
+            <label><input type="checkbox" name="platforms" value="Swiggy Instamart"><span>Swiggy Instamart</span></label>
+            <label><input type="checkbox" name="platforms" value="BigBasket"><span>BigBasket</span></label>
+            <label><input type="checkbox" name="platforms" value="JioMart"><span>JioMart</span></label>
+          </fieldset>
+        </section>
+        <div class="profile-actions"><p class="profile-status" id="profileStatus" role="status" aria-live="polite"></p><button class="save-profile" type="submit">Save profile <span aria-hidden="true">&#8594;</span></button></div>
+        <p class="storage-note">Demo only: profile details stay in this browser. Do not enter sensitive information.</p>
+      </form>
+    </div>
+  </main>
+  <footer class="site-footer"><p><strong>Grab Grocery</strong> is a student front-end project. Prices and availability are sample data.</p></footer>
+  <script src="profile.js"></script>
+</body>
+</html>

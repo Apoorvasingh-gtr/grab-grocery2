@@ -5,11 +5,11 @@
    ========================================================= */
 
 const STORES = [
-  { id: "blinkit",   name: "Blinkit",         color: "#f2c200", fee: 25, freeAbove: 199, eta: "10 min" },
-  { id: "zepto",     name: "Zepto",           color: "#7b2ff7", fee: 30, freeAbove: 199, eta: "10 min" },
-  { id: "instamart", name: "Swiggy Instamart", color: "#fc8019", fee: 25, freeAbove: 149, eta: "15 min" },
-  { id: "bigbasket", name: "BigBasket",       color: "#4f9a1c", fee: 30, freeAbove: 300, eta: "2 hrs" },
-  { id: "jiomart",   name: "JioMart",         color: "#0a5bd3", fee: 40, freeAbove: 249, eta: "Next day" },
+  { id: "blinkit",   name: "Blinkit",         color: "#f2c200", fee: 25, freeAbove: 199, eta: "10 min", url: "https://blinkit.com/" },
+  { id: "zepto",     name: "Zepto",           color: "#7b2ff7", fee: 30, freeAbove: 199, eta: "10 min", url: "https://www.zepto.com/" },
+  { id: "instamart", name: "Swiggy Instamart", color: "#fc8019", fee: 25, freeAbove: 149, eta: "15 min", url: "https://www.swiggy.com/instamart" },
+  { id: "bigbasket", name: "BigBasket",       color: "#4f9a1c", fee: 30, freeAbove: 300, eta: "2 hrs", url: "https://www.bigbasket.com/" },
+  { id: "jiomart",   name: "JioMart",         color: "#0a5bd3", fee: 40, freeAbove: 249, eta: "Next day", url: "https://www.jiomart.com/" },
 ];
 
 // prices order: blinkit, zepto, instamart, bigbasket, jiomart (null = not stocked)
@@ -229,9 +229,21 @@ $("#sortSelect").addEventListener("change", e => {
 function renderStores() {
   $("#storeList").innerHTML = STORES.map(s => `
     <li>
-      <span class="store-name"><span class="dot" style="background:${s.color}"></span>${s.name}</span>
-      <small>Delivery in ${s.eta}</small>
-      <small>${rupee(s.fee)} fee under ${rupee(s.freeAbove)}</small>
+      <details class="store-details">
+        <summary class="store-card-link">
+          <span class="store-name"><span class="dot" style="background:${s.color}"></span>${s.name}<span class="store-chevron" aria-hidden="true"></span></span>
+          <small>Delivery in ${s.eta}</small>
+          <small>${rupee(s.fee)} fee under ${rupee(s.freeAbove)}</small>
+          <small class="store-hint">Tap to see products and prices</small>
+        </summary>
+        <div class="store-expanded">
+          <ul class="store-products">
+            ${PRODUCTS.filter(product => product.prices[s.id] !== null).map(product => `
+              <li><span><strong>${product.name}</strong><small>${product.size}</small></span><span class="store-product-action"><b>${rupee(product.prices[s.id])}</b><a href="${storeSearchUrl(s.id, product)}" target="_blank" rel="noopener noreferrer" aria-label="Search for ${product.name} on ${s.name}">Search &#8599;</a></span></li>`).join("")}
+          </ul>
+          <a class="store-visit" href="${s.url}" target="_blank" rel="noopener noreferrer">Visit ${s.name} <span aria-hidden="true">&#8599;</span></a>
+        </div>
+      </details>
     </li>`).join("");
 }
 
@@ -240,6 +252,22 @@ renderHero();
 renderChips();
 renderGrid();
 renderStores();
+
+const aboutPanel = $("#aboutPanel");
+const aboutOpeners = document.querySelectorAll("[data-open-about]");
+aboutOpeners.forEach(opener => opener.addEventListener("click", event => {
+  event.preventDefault();
+  aboutPanel.showModal();
+  $("[data-close-about]", aboutPanel).focus();
+}));
+document.querySelectorAll("[data-close-about]").forEach(control => control.addEventListener("click", event => {
+  if (control.tagName === "A") event.preventDefault();
+  aboutPanel.close();
+  if (control.tagName === "A") document.querySelector("#products").scrollIntoView({ behavior: "smooth" });
+}));
+aboutPanel.addEventListener("click", event => {
+  if (event.target === aboutPanel) aboutPanel.close();
+});
 
 
 
